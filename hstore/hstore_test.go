@@ -2,8 +2,9 @@ package hstore
 
 import (
 	"database/sql"
-	_ "gitee.com/opengauss/openGauss-connector-go-pq"
 	"os"
+
+	_ "github.com/opengauss/openGauss-connector-go-pq"
 )
 
 type Fatalistic interface {

@@ -5,12 +5,13 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	_ "gitee.com/opengauss/openGauss-connector-go-pq"
 	"log"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	_ "github.com/opengauss/openGauss-connector-go-pq"
 )
 
 /*

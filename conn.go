@@ -9,7 +9,6 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"golang.org/x/text/encoding"
 	"io"
 	"net"
 	"strconv"
@@ -17,7 +16,9 @@ import (
 	"sync"
 	"time"
 
-	"gitee.com/opengauss/openGauss-connector-go-pq/oid"
+	"golang.org/x/text/encoding"
+
+	"github.com/opengauss/openGauss-connector-go-pq/oid"
 )
 
 // Common error types
@@ -887,7 +888,7 @@ func (cn *conn) auth(r *readBuf) {
 		}
 	case AuthReqGss: // GSSAPI, startup
 		if newGss == nil {
-			errorf("kerberos error: no GSSAPI provider registered (import gitee.com/opengauss/openGauss-connector-go-pq/auth/kerberos if you need Kerberos support)")
+			errorf("kerberos error: no GSSAPI provider registered (import github.com/opengauss/openGauss-connector-go-pq/auth/kerberos if you need Kerberos support)")
 		}
 		cli, err := newGss()
 		if err != nil {
@@ -1225,10 +1226,10 @@ func (cn *conn) parseComplete(commandTag string) (driver.Result, string) {
 // QuoteIdentifier quotes an "identifier" (e.g. a table or a column name) to be
 // used as part of an SQL statement.  For example:
 //
-//    tblname := "my_table"
-//    data := "my_data"
-//    quoted := pq.QuoteIdentifier(tblname)
-//    err := db.Exec(fmt.Sprintf("INSERT INTO %s VALUES ($1)", quoted), data)
+//	tblname := "my_table"
+//	data := "my_data"
+//	quoted := pq.QuoteIdentifier(tblname)
+//	err := db.Exec(fmt.Sprintf("INSERT INTO %s VALUES ($1)", quoted), data)
 //
 // Any double quotes in name will be escaped.  The quoted identifier will be
 // case sensitive when used in a query.  If the input string contains a zero
@@ -1245,8 +1246,8 @@ func QuoteIdentifier(name string) string {
 // to DDL and other statements that do not accept parameters) to be used as part
 // of an SQL statement.  For example:
 //
-//    exp_date := pq.QuoteLiteral("2023-01-05 15:00:00Z")
-//    err := db.Exec(fmt.Sprintf("CREATE ROLE my_user VALID UNTIL %s", exp_date))
+//	exp_date := pq.QuoteLiteral("2023-01-05 15:00:00Z")
+//	err := db.Exec(fmt.Sprintf("CREATE ROLE my_user VALID UNTIL %s", exp_date))
 //
 // Any single quotes in name will be escaped. Any backslashes (i.e. "\") will be
 // replaced by two backslashes (i.e. "\\") and the C-style escape identifier

@@ -7,9 +7,6 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"golang.org/x/text/encoding"
-	"golang.org/x/text/encoding/ianaindex"
-	"golang.org/x/text/transform"
 	"io/ioutil"
 	"math"
 	"regexp"
@@ -18,7 +15,11 @@ import (
 	"sync"
 	"time"
 
-	"gitee.com/opengauss/openGauss-connector-go-pq/oid"
+	"golang.org/x/text/encoding"
+	"golang.org/x/text/encoding/ianaindex"
+	"golang.org/x/text/transform"
+
+	"github.com/opengauss/openGauss-connector-go-pq/oid"
 )
 
 var (

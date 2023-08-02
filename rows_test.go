@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"gitee.com/opengauss/openGauss-connector-go-pq/oid"
+	"github.com/opengauss/openGauss-connector-go-pq/oid"
 )
 
 func TestDataTypeName(t *testing.T) {

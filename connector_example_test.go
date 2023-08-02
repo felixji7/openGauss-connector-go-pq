@@ -1,3 +1,4 @@
+//go:build go1.10
 // +build go1.10
 
 package pq_test
@@ -5,8 +6,6 @@ package pq_test
 import (
 	"database/sql"
 	"fmt"
-
-	"gitee.com/opengauss/openGauss-connector-go-pq"
 )
 
 func ExampleNewConnector() {

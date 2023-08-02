@@ -4,8 +4,6 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	pgpassfile "gitee.com/opengauss/openGauss-connector-go-pq/pgpassfile"
-	"gitee.com/opengauss/openGauss-connector-go-pq/pgservicefile"
 	"math"
 	"net"
 	"net/url"
@@ -14,6 +12,9 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	pgpassfile "github.com/opengauss/openGauss-connector-go-pq/pgpassfile"
+	"github.com/opengauss/openGauss-connector-go-pq/pgservicefile"
 )
 
 const (

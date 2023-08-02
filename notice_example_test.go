@@ -1,3 +1,4 @@
+//go:build go1.10
 // +build go1.10
 
 package pq_test
@@ -7,8 +8,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-
-	"gitee.com/opengauss/openGauss-connector-go-pq"
 )
 
 func getTestDsn() (string, error) {
