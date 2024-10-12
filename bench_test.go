@@ -16,7 +16,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/opengauss/openGauss-connector-go-pq/oid"
+	"github.com/felixji7/openGauss-connector-go-pq/oid"
 )
 
 var (

@@ -21,7 +21,7 @@ mechanism to avoid polling the database while waiting for more work to arrive.
 	    "fmt"
 	    "time"
 
-	    "github.com/opengauss/openGauss-connector-go-pq"
+	    "github.com/felixji7/openGauss-connector-go-pq"
 	)
 
 	func doWork(db *sql.DB, work int64) {

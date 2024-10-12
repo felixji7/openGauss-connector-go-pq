@@ -19,7 +19,7 @@ import (
 	"golang.org/x/text/encoding/ianaindex"
 	"golang.org/x/text/transform"
 
-	"github.com/opengauss/openGauss-connector-go-pq/oid"
+	"github.com/felixji7/openGauss-connector-go-pq/oid"
 )
 
 var (

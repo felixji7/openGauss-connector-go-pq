@@ -1,4 +1,4 @@
-module github.com/xishengcai/openGauss-connector-go-pq
+module github.com/felixji7/openGauss-connector-go-pq
 
 go 1.20
 

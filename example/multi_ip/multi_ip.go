@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-	_ "github.com/opengauss/openGauss-connector-go-pq"
+	_ "github.com/felixji7/openGauss-connector-go-pq"
 )
 
 /*

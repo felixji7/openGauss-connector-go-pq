@@ -18,7 +18,7 @@ import (
 
 	"golang.org/x/text/encoding"
 
-	"github.com/opengauss/openGauss-connector-go-pq/oid"
+	"github.com/felixji7/openGauss-connector-go-pq/oid"
 )
 
 // Common error types
@@ -888,7 +888,7 @@ func (cn *conn) auth(r *readBuf) {
 		}
 	case AuthReqGss: // GSSAPI, startup
 		if newGss == nil {
-			errorf("kerberos error: no GSSAPI provider registered (import github.com/opengauss/openGauss-connector-go-pq/auth/kerberos if you need Kerberos support)")
+			errorf("kerberos error: no GSSAPI provider registered (import github.com/felixji7/openGauss-connector-go-pq/auth/kerberos if you need Kerberos support)")
 		}
 		cli, err := newGss()
 		if err != nil {
